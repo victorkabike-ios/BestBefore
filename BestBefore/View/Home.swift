@@ -10,77 +10,14 @@ import SwiftUI
 struct Home: View {
     @StateObject var vm = ItemViewModel()
     @StateObject var notificationManager = NotificationManager()
-    
     @State private var showDetail:Bool = false
+    @State var tabselected = 1
     var body: some View {
         VStack{
             HeaderView()
             ZStack{
                 Color.gray.opacity(0.1).ignoresSafeArea(.all)
-                ScrollView {
-                    LazyVStack(alignment: .leading){
-                            ForEach(vm.savedEntity){ entity in
-                                HStack{
-                                    Image(systemName: "circle")
-                                        .foregroundColor(.green)
-                                    Text(entity.itemTitle ?? "")
-                                        .font(.headline)
-                                        .foregroundColor(.primary)
-                                    Text(" \(vm.daysBetween(todayDate: Date(), expiryDate: entity.expirationDate ?? Date())) days Left")
-                                }
-                                .frame(maxWidth: .infinity,alignment: .leading)
-                                .padding()
-                                .background(Color.white, in: RoundedRectangle(cornerRadius: 10))
-                                .onTapGesture {
-                                    showDetail.toggle()
-                                }
-                                .sheet(isPresented: $showDetail) {
-                                    NavigationStack{
-                                        VStack(alignment: .leading){
-                                            HStack{
-                                                Text("Category : ")
-                                                    .frame(maxWidth: .infinity , alignment: .leading)
-                                                    .font(.headline)
-                                                    .foregroundColor(.primary)
-                                                    .bold()
-                                                Text(entity.category ?? "")
-                                            }
-                                            .padding()
-                                            .background(Color.green.opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
-                                            HStack{
-                                                Text("Expiration Date: ")
-                                                    .frame(maxWidth: .infinity , alignment: .leading)
-                                                    .font(.headline)
-                                                    .foregroundColor(.primary)
-                                                    .bold()
-                                                Text(entity.expirationDate?.formatted(date: .abbreviated, time: .omitted) ?? Date().formatted(date: .abbreviated, time: .omitted))
-                                            }
-                                            .padding()
-                                            .background(Color.green.opacity(0.1), in: RoundedRectangle(cornerRadius: 8))
-                                            Spacer()
-                                                Button {
-                                                
-                                                } label: {
-                                                    Text("Edit")
-                                                        .foregroundColor(.white)
-                                                        .padding(.horizontal,180)
-                                                        .padding(.vertical,12)
-                                                        .background(Color.green, in: RoundedRectangle(cornerRadius: 10))
-                                                    
-                                                    
-                                                }
-
-                                        }.navigationTitle(entity.itemTitle ?? "")
-                                            .navigationBarTitleDisplayMode(.large)
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .padding()
-                                        Spacer()
-                                        
-                                    }.presentationDetents([.fraction(0.5)])
-                                }
-                            }
-                    }.padding()
-                }.frame(maxWidth: .infinity,maxHeight: .infinity)
+                ItemList(savedEntity: vm.savedEntity)
                 Button {
                     vm.newitem.toggle()
                 } label: {
@@ -108,7 +45,7 @@ struct Home: View {
                     Text("Hey")
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
-                    Text("Keep track of your Expiry food")
+                    Text("Keep track of your Expired food")
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
                 }.frame(maxWidth: .infinity,alignment: .leading)
@@ -127,6 +64,8 @@ struct Home: View {
             }.padding()
         }.frame(height: 120, alignment: .top)
     }
+    
+   
  
 }
 

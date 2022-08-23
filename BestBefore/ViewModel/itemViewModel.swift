@@ -57,14 +57,17 @@ class ItemViewModel: ObservableObject {
         }
     }
     
-    //MARK:- daysBetween
-        func daysBetween(todayDate: Date, expiryDate: Date) -> Int {
-            return Calendar.current.dateComponents([.day], from: todayDate, to: expiryDate).day!
+    func deleteData(at offset: IndexSet){
+        for index in offset {
+            let entity = savedEntity[index]
+            container.viewContext.delete(entity)
+            savedData()
         }
+    }
+    
     
     //Mark Sdelete
-    func deleteentity(){
-        
-    }
+    
+    
     
 }

@@ -17,12 +17,14 @@ struct Tab: View {
                    Image(systemName: "clock.badge.checkmark.fill")
                 }
                 .tag(1)
+            
             Notifications()
                 .tabItem {
                     Image(systemName: "bell.fill")
                         .badge(notificationManager.notifications.count)
                 }
                 .tag(2)
+            
             
         }
         

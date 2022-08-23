@@ -110,8 +110,8 @@ struct NewItem: View {
                                 Text("Save")
                                     .foregroundColor(.white)
                                     .padding(.horizontal,180)
-                                        .padding(.vertical,12)
-                                        .background(Color.green, in: RoundedRectangle(cornerRadius: 10))
+                                    .padding(.vertical,12)
+                                    .background(Color.green, in: RoundedRectangle(cornerRadius: 10))
                                 
                             }.padding()
 
