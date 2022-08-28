@@ -11,7 +11,7 @@ struct Home: View {
     @StateObject var vm = ItemViewModel()
     @StateObject var notificationManager = NotificationManager()
     @State private var showDetail:Bool = false
-    @State var tabselected = 1
+    @State var tabselected : Bool = false
     var body: some View {
         VStack{
             HeaderView()
@@ -28,7 +28,9 @@ struct Home: View {
                 }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .bottomTrailing)
                     .padding()
                     .sheet(isPresented: $vm.newitem) {
-                        NewItem(notificationManger: notificationManager)
+                        //NewItem(notificationManger: notificationManager)
+                        NewFood(notificationManger: NotificationManager())
+                            .presentationDetents([.fraction(0.4)])
                             
                     }
                     

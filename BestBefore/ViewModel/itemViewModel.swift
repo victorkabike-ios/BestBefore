@@ -35,13 +35,16 @@ class ItemViewModel: ObservableObject {
     }
     
     //Mark: Adding New entity into Core Data
-    func addNewEntity(title: String,category: String ,expirationDate: Date,notificationDate: Date){
+    func addNewEntity(title: String,category: String ,expirationDate: Date,notificationDate: Date, perishability: String, emoji: String, notificationTime: Date){
         let newEntity = DataEntity(context: container.viewContext)
         newEntity.id = UUID()
         newEntity.itemTitle = title
         newEntity.category = category
         newEntity.expirationDate = expirationDate
         newEntity.notificationDate = notificationDate
+        newEntity.notificationTime  = notificationTime
+        newEntity.emoji = emoji
+        newEntity.perishability = perishability
         
         // call save data
         savedData()
@@ -57,17 +60,18 @@ class ItemViewModel: ObservableObject {
         }
     }
     
-    func deleteData(at offset: IndexSet){
-        for index in offset {
-            let entity = savedEntity[index]
-            container.viewContext.delete(entity)
-            savedData()
-        }
-    }
+
     
     
     //Mark Sdelete
     
-    
+    func ExpiredFood(){
+        for entity in savedEntity {
+            if entity.expirationDate == Date.now {
+                entity.isExpired = true
+                savedData()
+            }
+        }
+    }
     
 }

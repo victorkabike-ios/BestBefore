@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF14D7EC289C454300502B53 /* NewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF14D7EB289C454300502B53 /* NewItem.swift */; };
+		FF7B24D928B920400078572E /* NewFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B24D828B920400078572E /* NewFood.swift */; };
 		FF86D5E728B3F51D00815F4A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86D5E628B3F51D00815F4A /* CoreDataManager.swift */; };
 		FF86D5E928B495D700815F4A /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86D5E828B495D700815F4A /* ItemList.swift */; };
+		FF86D5EB28B549E600815F4A /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86D5EA28B549E600815F4A /* EmojiPicker.swift */; };
 		FF99A3BA28A29BD500B97E0E /* Data controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99A3B928A29BD500B97E0E /* Data controller.swift */; };
 		FF99A3BC28A5716600B97E0E /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99A3BB28A5716600B97E0E /* NotificationManager.swift */; };
 		FF99A3C028A8F70200B97E0E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99A3BF28A8F70200B97E0E /* Tab.swift */; };
@@ -45,9 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FF14D7EB289C454300502B53 /* NewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItem.swift; sourceTree = "<group>"; };
+		FF7B24D828B920400078572E /* NewFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFood.swift; sourceTree = "<group>"; };
 		FF86D5E628B3F51D00815F4A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FF86D5E828B495D700815F4A /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		FF86D5EA28B549E600815F4A /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
 		FF99A3B928A29BD500B97E0E /* Data controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data controller.swift"; sourceTree = "<group>"; };
 		FF99A3BB28A5716600B97E0E /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		FF99A3BF28A8F70200B97E0E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				FF86D5E628B3F51D00815F4A /* CoreDataManager.swift */,
+				FF86D5EA28B549E600815F4A /* EmojiPicker.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -170,7 +173,7 @@
 				FF99A3C328AD65A500B97E0E /* ItemDetail.swift */,
 				FF99A3BF28A8F70200B97E0E /* Tab.swift */,
 				FF99A3C128A8FD3100B97E0E /* Notifications.swift */,
-				FF14D7EB289C454300502B53 /* NewItem.swift */,
+				FF7B24D828B920400078572E /* NewFood.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,8 +321,9 @@
 				FF99A3C428AD65A500B97E0E /* ItemDetail.swift in Sources */,
 				FFC0A902289C26EF006E417C /* BestBefore.xcdatamodeld in Sources */,
 				FFC0A927289C29BB006E417C /* Home.swift in Sources */,
-				FF14D7EC289C454300502B53 /* NewItem.swift in Sources */,
+				FF7B24D928B920400078572E /* NewFood.swift in Sources */,
 				FFC0A929289C2A16006E417C /* itemViewModel.swift in Sources */,
+				FF86D5EB28B549E600815F4A /* EmojiPicker.swift in Sources */,
 				FFC0A8F8289C26EB006E417C /* ContentView.swift in Sources */,
 				FF86D5E728B3F51D00815F4A /* CoreDataManager.swift in Sources */,
 				FF99A3BA28A29BD500B97E0E /* Data controller.swift in Sources */,

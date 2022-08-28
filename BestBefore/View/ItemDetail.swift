@@ -43,7 +43,7 @@ struct ItemDetail: View {
                     }
                     .frame(width: 400,height: 80)
                     .background(Color.white, in: RoundedRectangle(cornerRadius: 15))
-                    .padding()
+                    .padding(.horizontal)
                     
                     
                     
@@ -54,7 +54,7 @@ struct ItemDetail: View {
                             .padding()
                             .background(Color.green, in: Circle())
                         VStack(alignment: .leading){
-                            Text("Date")
+                            Text(" Expiring Date")
                                 .font(.headline)
                                 .bold()
                             Text(ExpirationDate.formatted(date: .complete, time: .omitted))
@@ -66,7 +66,7 @@ struct ItemDetail: View {
                     }
                     .frame(width: 400,height: 80)
                     .background(Color.white, in: RoundedRectangle(cornerRadius: 15))
-                    .padding()
+                    .padding(.horizontal)
                     
                     Spacer()
                     HStack{

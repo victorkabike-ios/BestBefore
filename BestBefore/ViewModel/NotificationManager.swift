@@ -41,7 +41,7 @@ class NotificationManager: ObservableObject {
         }
     }
 
-    func scheduleNotification(title: String ,expirationDate: Date) {
+    func scheduleNotification(title: String ,expirationDate: Date, time: Date) {
         let notificationId = UUID().uuidString
         let content = UNMutableNotificationContent()
         content.title = title
@@ -52,8 +52,8 @@ class NotificationManager: ObservableObject {
         let calendar = Calendar.current
         var  weekday = calendar.component(.weekday, from: expirationDate)
         var day = calendar.component(.day, from: expirationDate)
-        var hour = calendar.component(.hour, from: expirationDate)
-        var min = calendar.component(.minute, from: expirationDate)
+        var hour = calendar.component(.hour, from: time)
+        var min = calendar.component(.minute, from: time)
         var component = DateComponents()
         component.weekday = weekday
         component.day = day

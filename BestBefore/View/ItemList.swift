@@ -23,8 +23,7 @@ struct ItemList: View {
                                 Button {
                                     
                                 } label: {
-                                    Image(systemName: "circle")
-                                        .foregroundColor(.green)
+                                    Text(entity.emoji ?? "")
                                 }
 
                                 Text(entity.itemTitle ?? "")
@@ -39,7 +38,6 @@ struct ItemList: View {
                         }
 
                     }
-                .onDelete(perform: vm.deleteData)
                 Divider()
             }.padding()
         }.frame(maxWidth: .infinity,maxHeight: .infinity)
