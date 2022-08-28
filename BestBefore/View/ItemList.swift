@@ -16,7 +16,7 @@ struct ItemList: View {
             LazyVStack(alignment: .leading){
                 ForEach(savedEntity){ entity in
                         NavigationLink {
-                            ItemDetail(itemTitle: entity.itemTitle ?? "", category: entity.category ?? "", ExpirationDate: entity.expirationDate ?? Date())
+                            ItemDetail(itemID: entity.id ?? UUID(), itemTitle: entity.itemTitle ?? "", category: entity.category ?? "", ExpirationDate: entity.expirationDate ?? Date())
                         } label: {
                             
                             HStack{

@@ -64,6 +64,15 @@ class ItemViewModel: ObservableObject {
     
     
     //Mark Sdelete
+    func deleteData(id: UUID){
+        for entity in savedEntity {
+            if id == entity.id {
+                container.viewContext.delete(entity)
+            }
+        }
+        savedData()
+        fetchData()
+    }
     
     func ExpiredFood(){
         for entity in savedEntity {
@@ -73,5 +82,7 @@ class ItemViewModel: ObservableObject {
             }
         }
     }
+    
+    
     
 }

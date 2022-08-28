@@ -37,6 +37,12 @@ struct Home: View {
 
             }
         }
+        .onAppear {
+            vm.fetchData()
+        }
+        .refreshable {
+            vm.fetchData()
+        }
     }
     @ViewBuilder
     func HeaderView() -> some View {

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ItemDetail: View {
+    @StateObject var vm = ItemViewModel()
+    var itemID: UUID?
     var  itemTitle: String
     var category: String
     var ExpirationDate: Date
@@ -71,6 +73,7 @@ struct ItemDetail: View {
                     Spacer()
                     HStack{
                         Button {
+                            vm.deleteData(id: itemID ?? UUID())
                             
                         } label: {
                            Label("delete", systemImage: "trash")
@@ -78,13 +81,6 @@ struct ItemDetail: View {
                         }
                         .padding()
                         .buttonBorderShape(.roundedRectangle(radius: 8))
-                        Button {
-                            
-                        } label: {
-                           Label("delete", systemImage: "trash")
-                                .foregroundColor(.gray)
-                        }
-
 
                     }.padding()
 
