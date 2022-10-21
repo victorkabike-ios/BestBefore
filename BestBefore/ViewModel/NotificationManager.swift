@@ -41,19 +41,20 @@ class NotificationManager: ObservableObject {
         }
     }
 
-    func scheduleNotification(title: String ,expirationDate: Date, time: Date) {
+    func scheduleNotification(title: String ,expirationDate: Date, time: Date ,emoji: String) {
         let notificationId = UUID().uuidString
         let content = UNMutableNotificationContent()
         content.title = title
-        content.subtitle = "Expired Item "
+        content.subtitle = expirationDate.formatted(date: .numeric, time: .omitted)
+        content.body = emoji
         content.sound = .default
         
         // Calendar
         let calendar = Calendar.current
-        var  weekday = calendar.component(.weekday, from: expirationDate)
-        var day = calendar.component(.day, from: expirationDate)
-        var hour = calendar.component(.hour, from: time)
-        var min = calendar.component(.minute, from: time)
+        let  weekday = calendar.component(.weekday, from: expirationDate)
+        let day = calendar.component(.day, from: expirationDate)
+        let hour = calendar.component(.hour, from: time)
+        let min = calendar.component(.minute, from: time)
         var component = DateComponents()
         component.weekday = weekday
         component.day = day
@@ -67,6 +68,10 @@ class NotificationManager: ObservableObject {
         
         UNUserNotificationCenter.current().add(request)
         
+    }
+    
+    func deleteLocalNotification(identifier: [String]){
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifier)
     }
     
 }

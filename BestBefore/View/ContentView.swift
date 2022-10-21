@@ -9,9 +9,13 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @StateObject var notificationManager = NotificationManager()
     var body: some View {
-        NavigationStack{
+        NavigationView{
             Tab()
+        }
+        .onAppear {
+            notificationManager.requestAuthorization()
         }
        
     }

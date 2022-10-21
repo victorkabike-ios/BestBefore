@@ -8,16 +8,36 @@
 import SwiftUI
 
 struct Home: View {
+    @Namespace var namespace
+    @State var  showSideMenu: Bool = false
     @StateObject var vm = ItemViewModel()
     @StateObject var notificationManager = NotificationManager()
     @State private var showDetail:Bool = false
     @State var tabselected : Bool = false
+    
     var body: some View {
         VStack{
             HeaderView()
-            ZStack{
-                Color.gray.opacity(0.1).ignoresSafeArea(.all)
-                ItemList(savedEntity: vm.savedEntity)
+            ZStack(alignment: .top){
+                //Color.gray.opacity(0.1).ignoresSafeArea(.all)
+                LazyVStack(pinnedViews: [.sectionHeaders]){
+                    Section {
+                        ItemList(savedEntity: vm.savedEntity)
+                    } header: {
+                        HStack{
+                            Text("Expiry Food")
+                                .bold()
+                                .font(.headline)
+                                .foregroundColor(.primary)
+                        }
+                        .frame(maxWidth: .infinity,alignment: .leading)
+                        .padding(.horizontal)
+                        .padding(.top)
+                    }
+                    
+
+                }
+                
                 Button {
                     vm.newitem.toggle()
                 } label: {
@@ -30,19 +50,17 @@ struct Home: View {
                     .sheet(isPresented: $vm.newitem) {
                         //NewItem(notificationManger: notificationManager)
                         NewFood(notificationManger: NotificationManager())
-                            .presentationDetents([.fraction(0.4)])
+
                             
                     }
                     
 
             }
         }
-        .onAppear {
-            vm.fetchData()
-        }
         .refreshable {
             vm.fetchData()
         }
+        .navigationBarBackButtonHidden()
     }
     @ViewBuilder
     func HeaderView() -> some View {
@@ -53,20 +71,22 @@ struct Home: View {
                     Text("Hey")
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
-                    Text("Keep track of your Expired food")
+                    Text("Keep track of your Expiry food")
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
                 }.frame(maxWidth: .infinity,alignment: .leading)
-                Button {
-                    
+                NavigationLink {
+                    WastedFoodList(savedEntity: vm.WastedFoodEntity)
                 } label: {
-                    Image("menu")
-                        .resizable()
-                        .frame(width: 28, height: 28)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.white.opacity(0.1), in: Circle())
+                        Image(systemName: "arrow.up.bin.fill")
+                            .resizable()
+                            .frame(width: 28, height: 28)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.white.opacity(0.1), in: Circle())
                 }
+
+               
 
 
             }.padding()

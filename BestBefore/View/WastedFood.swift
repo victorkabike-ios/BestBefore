@@ -1,13 +1,13 @@
 //
-//  ItemList.swift
+//  WastedFood.swift
 //  BestBefore
 //
-//  Created by victor kabike on 2022/08/23.
+//  Created by victor kabike on 2022/10/06.
 //
 
 import SwiftUI
 
-struct ItemList: View {
+struct WastedFoodList: View {
     @StateObject var vm = ItemViewModel()
     @StateObject var notificationManager = NotificationManager()
     var savedEntity :  [DataEntity]
@@ -18,7 +18,6 @@ struct ItemList: View {
             LazyVStack(alignment: .leading){
                 
                 ForEach(savedEntity){ entity in
-
                         NavigationLink {
                             ItemDetail(notificationManger: notificationManager, emojiText: entity.emoji ?? "", itemID: entity.id ?? UUID(), itemTitle: entity.itemTitle ?? "", category: entity.category ?? "", ExpirationDate: entity.expirationDate ?? Date(), reminderTime: entity.notificationTime ?? Date(), perishability: entity.perishability ?? "")
                         } label: {
@@ -55,13 +54,13 @@ struct ItemList: View {
                                     Rectangle()
                                         .fill(Color.gray)
                                         .frame(height: 2)
+                                        
                                 }
                             }
                             
                             
 
                         }
-                    }
 
                         
                 }
@@ -70,6 +69,7 @@ struct ItemList: View {
                 
             }.frame(maxWidth: .infinity,maxHeight: .infinity)
         }
+    }
         
         //MARK:- daysBetween
         func daysBetween(todayDate: Date, expiryDate: Date) -> some View {

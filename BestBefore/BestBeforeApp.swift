@@ -14,6 +14,7 @@ struct BestBeforeApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(ItemViewModel())
+                .preferredColorScheme(.light)
         }
     }
 }

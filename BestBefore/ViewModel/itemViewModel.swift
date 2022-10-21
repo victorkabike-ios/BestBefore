@@ -13,6 +13,8 @@ class ItemViewModel: ObservableObject {
     @Published var newitem:Bool = false
     let container: NSPersistentContainer
     @Published var savedEntity: [DataEntity] = []
+    @Published var WastedFoodEntity:[DataEntity] = []
+    
     init() {
         container = NSPersistentContainer(name: "BestBefore")
         container.loadPersistentStores { description, error in
@@ -21,8 +23,21 @@ class ItemViewModel: ObservableObject {
             }
         }
         fetchData()
+        fetchWastedData()
     }
     
+    func fetchWastedData(){
+        let request = NSFetchRequest<DataEntity>(entityName: "DataEntity")
+        let sortDescriptor = NSSortDescriptor(key: "iswasted", ascending: false)
+        let predicate = NSPredicate(format: "iswasted == %@",NSNumber(value: true))
+        request.sortDescriptors = [sortDescriptor]
+        request.predicate = predicate
+        do{
+            WastedFoodEntity =  try container.viewContext.fetch(request)
+        }catch let error{
+            print("Error fetching data \(error.localizedDescription)")
+        }
+    }
     
     // Mark: Fetching Core Data
     func fetchData() {
@@ -55,12 +70,12 @@ class ItemViewModel: ObservableObject {
         do{
             try container.viewContext.save()
             fetchData()
+            fetchWastedData()
         } catch let error {
             print("Error Saving Data \(error.localizedDescription)")
         }
     }
     
-
     
     
     //Mark Sdelete
@@ -74,15 +89,33 @@ class ItemViewModel: ObservableObject {
         fetchData()
     }
     
-    func ExpiredFood(){
+    func isConsumed(id: UUID){
         for entity in savedEntity {
-            if entity.expirationDate == Date.now {
-                entity.isExpired = true
+            if id == entity.id{
+                entity.isConsumed = true
+               savedData()
+            }
+        }
+    }
+    
+    func isWasted(id: UUID){
+        for entity in savedEntity {
+            if id == entity.id {
+                entity.iswasted = true
                 savedData()
             }
         }
     }
     
-    
+    func isExpired(expiryDate: Date) -> Bool {
+        var expired = false
+        
+        let day = Calendar.current.dateComponents([.day], from: Date(), to: expiryDate).day!
+        if day <= 0 {
+           expired = true
+        }
+return expired
+    }
+ 
     
 }

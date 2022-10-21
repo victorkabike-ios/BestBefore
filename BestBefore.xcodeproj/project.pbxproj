@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF1CA3E628F5E3E80084DF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1CA3E528F5E3E80084DF70 /* LaunchScreen.storyboard */; };
 		FF7B24D928B920400078572E /* NewFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B24D828B920400078572E /* NewFood.swift */; };
 		FF86D5E728B3F51D00815F4A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86D5E628B3F51D00815F4A /* CoreDataManager.swift */; };
 		FF86D5E928B495D700815F4A /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86D5E828B495D700815F4A /* ItemList.swift */; };
@@ -16,6 +17,7 @@
 		FF99A3C028A8F70200B97E0E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99A3BF28A8F70200B97E0E /* Tab.swift */; };
 		FF99A3C228A8FD3100B97E0E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99A3C128A8FD3100B97E0E /* Notifications.swift */; };
 		FF99A3C428AD65A500B97E0E /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99A3C328AD65A500B97E0E /* ItemDetail.swift */; };
+		FF9FFEE928DCD14E00E464AB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9FFEE828DCD14E00E464AB /* CalendarView.swift */; };
 		FFC0A8F6289C26EB006E417C /* BestBeforeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A8F5289C26EB006E417C /* BestBeforeApp.swift */; };
 		FFC0A8F8289C26EB006E417C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A8F7289C26EB006E417C /* ContentView.swift */; };
 		FFC0A8FA289C26EF006E417C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC0A8F9289C26EF006E417C /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		FFC0A918289C26EF006E417C /* BestBeforeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A917289C26EF006E417C /* BestBeforeUITestsLaunchTests.swift */; };
 		FFC0A927289C29BB006E417C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A926289C29BB006E417C /* Home.swift */; };
 		FFC0A929289C2A16006E417C /* itemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A928289C2A16006E417C /* itemViewModel.swift */; };
+		FFC5189228EF324700F5D5DE /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5189128EF324700F5D5DE /* CalenderView.swift */; };
+		FFC5189428EF4F6E00F5D5DE /* WastedFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5189328EF4F6E00F5D5DE /* WastedFood.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF1CA3E228F5DC420084DF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF1CA3E528F5E3E80084DF70 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF7B24D828B920400078572E /* NewFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFood.swift; sourceTree = "<group>"; };
 		FF86D5E628B3F51D00815F4A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FF86D5E828B495D700815F4A /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
@@ -55,6 +61,7 @@
 		FF99A3BF28A8F70200B97E0E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		FF99A3C128A8FD3100B97E0E /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		FF99A3C328AD65A500B97E0E /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		FF9FFEE828DCD14E00E464AB /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		FFC0A8F2289C26EB006E417C /* BestBefore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestBefore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC0A8F5289C26EB006E417C /* BestBeforeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBeforeApp.swift; sourceTree = "<group>"; };
 		FFC0A8F7289C26EB006E417C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +75,8 @@
 		FFC0A917289C26EF006E417C /* BestBeforeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBeforeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FFC0A926289C29BB006E417C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FFC0A928289C2A16006E417C /* itemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemViewModel.swift; sourceTree = "<group>"; };
+		FFC5189128EF324700F5D5DE /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
+		FFC5189328EF4F6E00F5D5DE /* WastedFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastedFood.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +136,7 @@
 		FFC0A8F4289C26EB006E417C /* BestBefore */ = {
 			isa = PBXGroup;
 			children = (
+				FF1CA3E228F5DC420084DF70 /* Info.plist */,
 				FF86D5E528B3F50300815F4A /* Helper */,
 				FFC0A8F5289C26EB006E417C /* BestBeforeApp.swift */,
 				FFC0A924289C2955006E417C /* View */,
@@ -170,10 +180,14 @@
 				FFC0A8F7289C26EB006E417C /* ContentView.swift */,
 				FFC0A926289C29BB006E417C /* Home.swift */,
 				FF86D5E828B495D700815F4A /* ItemList.swift */,
+				FFC5189328EF4F6E00F5D5DE /* WastedFood.swift */,
+				FFC5189128EF324700F5D5DE /* CalenderView.swift */,
 				FF99A3C328AD65A500B97E0E /* ItemDetail.swift */,
 				FF99A3BF28A8F70200B97E0E /* Tab.swift */,
+				FF9FFEE828DCD14E00E464AB /* CalendarView.swift */,
 				FF99A3C128A8FD3100B97E0E /* Notifications.swift */,
 				FF7B24D828B920400078572E /* NewFood.swift */,
+				FF1CA3E528F5E3E80084DF70 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1CA3E628F5E3E80084DF70 /* LaunchScreen.storyboard in Resources */,
 				FFC0A8FD289C26EF006E417C /* Preview Assets.xcassets in Resources */,
 				FFC0A8FA289C26EF006E417C /* Assets.xcassets in Resources */,
 			);
@@ -322,8 +337,11 @@
 				FFC0A902289C26EF006E417C /* BestBefore.xcdatamodeld in Sources */,
 				FFC0A927289C29BB006E417C /* Home.swift in Sources */,
 				FF7B24D928B920400078572E /* NewFood.swift in Sources */,
+				FF9FFEE928DCD14E00E464AB /* CalendarView.swift in Sources */,
+				FFC5189228EF324700F5D5DE /* CalenderView.swift in Sources */,
 				FFC0A929289C2A16006E417C /* itemViewModel.swift in Sources */,
 				FF86D5EB28B549E600815F4A /* EmojiPicker.swift in Sources */,
+				FFC5189428EF4F6E00F5D5DE /* WastedFood.swift in Sources */,
 				FFC0A8F8289C26EB006E417C /* ContentView.swift in Sources */,
 				FF86D5E728B3F51D00815F4A /* CoreDataManager.swift in Sources */,
 				FF99A3BA28A29BD500B97E0E /* Data controller.swift in Sources */,
@@ -484,56 +502,78 @@
 		FFC0A91C289C26EF006E417C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestBefore/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Z7S7M5YQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BestBefore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GudFood;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Victor-Kabike.BestBefore";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victor-Kabike.GudFood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FFC0A91D289C26EF006E417C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestBefore/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Z7S7M5YQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BestBefore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GudFood;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Victor-Kabike.BestBefore";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victor-Kabike.GudFood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

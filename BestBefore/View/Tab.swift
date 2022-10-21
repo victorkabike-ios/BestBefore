@@ -14,19 +14,37 @@ struct Tab: View {
         TabView(selection: $selectedtab){
             Home()
                 .tabItem {
-                   Image(systemName: "clock.badge.checkmark.fill")
+                    VStack{
+                        Image(systemName: "square.grid.2x2.fill")
+                        Text("Today")
+                    }
                 }
                 .tag(1)
             
+//            CalendarView()
+//                .tabItem {
+//                    VStack{
+//                        Image(systemName: "calendar")
+//                        Text("Calendar")
+//                    }
+//                }
+//                .tag(2)
+//                .hidden()
+            
             Notifications()
                 .tabItem {
-                    Image(systemName: "bell.fill")
-                        .badge(notificationManager.notifications.count)
+                    
+                    VStack {
+                        Image(systemName: "bell.fill")
+                            .badge(notificationManager.notifications.count)
+                        Text("Notifications")
+                    }
                 }
-                .tag(2)
+                .tag(3)
             
             
         }
+        .navigationBarBackButtonHidden()
         
     }
 }
